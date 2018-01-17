@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ether Whuffie Manager</title>
+  <script
+     src="https://code.jquery.com/jquery-3.2.1.slim.js"
+     integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
+     crossorigin="anonymous"></script>
+  <script src="EtherWhuffieABI.js"></script>
+  <script src="EtherWhuffieAPI.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+  <h1>Ether Whuffies</h1>
+  Looking at address <span id="address">0x0</span>
+  
+  <br/>
+
+  Look at different address?
+  <input type="text" id="newAddress" />
+  <button id="inputAddress">Go</button>
+
+  <h2>Stats</h2>
+  Positive Whuffies: <span id="positiveWhuffies"></span> <br/>
+  Negative Whuffies: <span id="negativeWhuffies"></span> <br/>
+  Total Whuffies: <span id="totalWhuffies"></span> <br/>
+
+  <h2>Send Positive Whuffies</h2>
+  Positive Whuffies: <input type="text" id="pWhuffiesToSend" /> <br/>
+  Message: <input type="text" id="pMessage" /> <br/>
+  <button id="sendPWhuffies">Send Positive Whuffies</button>
+
+  <h2>Send Negative Whuffies</h2>
+  Negative Whuffies: <input type="text" id="nWhuffiesToSend" /> <br/>
+  Message: <input type="text" id="nMessage" /> <br/>
+  <button id="sendNWhuffies">Send Negative Whuffies</button>
+
+  
+</body>
+</html>
