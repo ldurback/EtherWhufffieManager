@@ -21,7 +21,7 @@ function init() {
 	});
 
 	$("#sendPWhuffies").click(function(event) {
-		amount = parseInt($("#pWhuffiesToSend").val());
+		amount = new BigNumber(parseInt($("#pWhuffiesToSend").val())).times(1000000000000000000);
 		message = $("#pMessage").val();
 
 		sendPositiveWhuffies(amount, message);
@@ -35,7 +35,7 @@ function init() {
 	});
 
 	$("#sendNWhuffies").click(function(event) {
-		amount = parseInt($("#nWhuffiesToSend").val());
+		amount = new BigNumber(parseInt($("#nWhuffiesToSend").val())).times(1000000000000000000);
 		message = $("#nMessage").val();
 
 		sendNegativeWhuffies(amount, message);
@@ -51,9 +51,9 @@ function init() {
 }
 
 function updateStatusFields() {
-	pWhuffies = stats[0].toNumber();
-	nWhuffies = stats[1].toNumber();
-	tWhuffies = stats[0].minus(stats[1]).toNumber();
+	pWhuffies = stats[0].dividedBy(1000000000000000000).toNumber();
+	nWhuffies = stats[1].dividedBy(1000000000000000000).toNumber();
+	tWhuffies = stats[0].minus(stats[1]).dividedBy(1000000000000000000).toNumber();
 
 	$("#positiveWhuffies").text(pWhuffies);
 	$("#negativeWhuffies").text(nWhuffies);
